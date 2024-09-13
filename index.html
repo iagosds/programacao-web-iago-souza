@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Ponto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="data-hora">
+        <p id="dia-semana">X</p>
+        <p id="data">dd/mm/aaaa</p>
+        <p id="hora"></p>
+        <button id="open-dialog">Bater Ponto</button>
+    </div>
+    
+    <dialog id="dialog">
+        <div class="data-hora">
+            <p id="dialog-data"></p>
+            <p id="dialog-hora"></p>
+        </div>
+        
+        <div>
+            <button id="entrada">
+                <img src="./imagens-ponto/IMG-20240903-WA0045.jpg" alt="" class="botoes-ponto"></img>
+            </button>
+            <button id="pausa">
+                <img src="./imagens-ponto/IMG-20240903-WA0046.jpg" alt="" class="botoes-ponto"></img>
+            </button>
+        </div>
+        <div>
+            <button id="retorno">
+                <img src="./imagens-ponto/IMG-20240903-WA0047.jpg" alt="" class="botoes-ponto"></img>
+            </button>
+            <button id="saida">
+                <img src="./imagens-ponto/IMG-20240903-WA0048.jpg" alt="" class="botoes-ponto"></img>
+            </button>
+        </div>
+        
+        <button id="close-dialog" class="data-hora">Fechar</button>
+    </dialog>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

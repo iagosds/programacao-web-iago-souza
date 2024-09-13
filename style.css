@@ -1,0 +1,11 @@
+.data-hora {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.botoes-ponto {
+    width: 6cm;
+    height: 2cm;
+    object-fit: cover;
+}
+
