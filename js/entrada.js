@@ -6,4 +6,9 @@ function today(){
     return ano + '-' + mes + '-' + dia;
 };
 
-document.getElementById('data').max = today();
+console.log(today())
+document.addEventListener('DOMContentLoaded', () => {
+    // document.addEventListener('DOMContentLoaded') -> garante que o código
+    // só seja executado após carregamento completo do DOM
+    document.getElementById('data').max = today();
+});;
