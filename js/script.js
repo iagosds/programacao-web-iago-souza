@@ -14,11 +14,16 @@ const dialogHora = document.getElementById('dialog-hora')
 
 // SET REAL TIME DATA ON SCREEN
 
-dialogData.textContent = "Data: " + getDate();
-dialogHora.textContent = "Hora: " + getHour();
-dia.textContent = getWeekDay();
-data.textContent = getDate();
-hora.textContent = getHour();
+function set_data(){
+    dialogData.textContent = "Data: " + getDate();
+    dialogHora.textContent = "Hora: " + getHour();
+    dia.textContent = getWeekDay();
+    data.textContent = getDate();
+    hora.textContent = getHour();
+    setInterval(set_data, 1000);
+}
+set_data();
+
 
 
 
@@ -47,7 +52,7 @@ function getHour() {
     // slice()
     // formatos de hora considerando o locale do usuário
     const date = new Date();
-    return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    return date.getHours() + ":" + String(date.getMinutes()).padStart(2, '0') + ":" + String(date.getSeconds()).padStart(2, '0');
 };
 function getDate(){
     // Alterar a solução para considerar padStart ou slice
