@@ -8,4 +8,17 @@
     height: 2cm;
     object-fit: cover;
 }
+.hidden {
+    display: none;
+}
+
+/* Classe para mostrar o alerta */
+.show {
+    display: block;
+    /* Estilos opcionais para o alerta */
+    background-color: lightgreen;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 10px;
+}
 

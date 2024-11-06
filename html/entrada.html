@@ -8,13 +8,18 @@
     <title>Entrada</title>
 </head>
 <body>
-    <div>
+    <div class="center-div">
         <p>Data do Ponto</p>
         <input  type="date" id="data" placeholder="dd/mm/aaaa">
+        <button id="histPontos">Histórico de Entradas</button>
     </div>
-    <div>
-        <p>Últimas Entradas</p>
-        
-    </div>
+
+    <dialog id="histDialog"> 
+        <div>
+            <p>Histórico de Entradas</p>
+            <button id="closeHist">Fechar </button>
+        </div>
+    </dialog>
+   
 </body>
 </html>

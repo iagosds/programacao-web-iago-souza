@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="alerta-registro-ponto" class="hidden">
+        <p>Ponto registrado com sucesso</p>
+        <button id="alerta-registro-ponto-fechar">X</button>
+    </div>
     <div class="data-hora">
         <p id="dia-semana">X</p>
         <p id="data">dd/mm/aaaa</p>
@@ -21,20 +25,14 @@
         </div>
         
         <div>
-            <button id="entrada">
-                <img src="./imagens-ponto/IMG-20240903-WA0045.jpg" alt="" class="botoes-ponto"></img>
-            </button>
-            <button id="pausa">
-                <img src="./imagens-ponto/IMG-20240903-WA0046.jpg" alt="" class="botoes-ponto"></img>
-            </button>
-        </div>
-        <div>
-            <button id="retorno">
-                <img src="./imagens-ponto/IMG-20240903-WA0047.jpg" alt="" class="botoes-ponto"></img>
-            </button>
-            <button id="saida">
-                <img src="./imagens-ponto/IMG-20240903-WA0048.jpg" alt="" class="botoes-ponto"></img>
-            </button>
+            <select name="tipos-ponto" id="tipos-ponto">
+                <option value="entrada">Entrada</option>
+                <option value="intervalo">Intervalo</option>
+                <option value="volta-intervalo">Volta Intervalo</option>
+                <option value="saida">Saída</option>
+            </select>
+            <button id="btn-dialog-bater-ponto">Registrar ponto</button>
+            <p id="dialog-last-register"></p>
         </div>
         
         <button id="close-dialog" class="data-hora">Fechar</button>
