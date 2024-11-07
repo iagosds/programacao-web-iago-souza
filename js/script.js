@@ -1,3 +1,5 @@
+
+
 // VARIÁVEIS DO DIALOG
 const dialog = document.getElementById('dialog');
 const openBtn = document.getElementById('open-dialog');
@@ -19,6 +21,20 @@ btnCloseAlertRegister.addEventListener("click", () => {
     divAlertaRegistroPonto.classList.remove("show");
     divAlertaRegistroPonto.classList.add("hidden");
 });
+
+// DEFINE LIMITE DE DATA DO PONTO COMO DIA DE HOJE
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('data-ponto').max = today();
+});
+
+function today() {
+    const hoje = new Date();
+    const ano = hoje.getFullYear();
+    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+    const dia = String(hoje.getDate()).padStart(2, '0');
+    return ano + '-' + mes + '-' + dia;
+};
 
 // VARIÁVEIS PARA REGISTRO DE PONTO
 const nextRegister = {
