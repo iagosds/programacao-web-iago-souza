@@ -25,8 +25,18 @@ btnCloseAlertRegister.addEventListener("click", () => {
 // DEFINE LIMITE DE DATA DO PONTO COMO DIA DE HOJE
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('data-ponto').max = today();
+    const campoData = document.getElementById('data-ponto');
+    campoData.max = today();
+    campoData.value = today();
+    const antigo = true; // Define se marcação é antiga ou não
+    if (document.getElementById('data-ponto')==today()){
+        antigo = false;
+    } else {
+        antigo = true;
+    };
 });
+
+
 
 function today() {
     const hoje = new Date();
@@ -57,7 +67,8 @@ baterPonto.addEventListener("click", async () => {
         "hora": getHour(),
         "localizacao": userCurrentPosition,
         "id": 1,
-        "tipo": typeRegister.value
+        "tipo": typeRegister.value,
+        "antigo": antigo
     };
 
     // Salva o registro no localStorage
