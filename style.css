@@ -1,24 +1,62 @@
-.data-hora {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.botoes-ponto {
-    width: 6cm;
-    height: 2cm;
-    object-fit: cover;
-}
 .hidden {
     display: none;
 }
 
-/* Classe para mostrar o alerta */
 .show {
     display: block;
-    /* Estilos opcionais para o alerta */
-    background-color: lightgreen;
-    border: 1px solid green;
-    padding: 10px;
-    margin: 10px;
 }
 
+.data-hora {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#alerta-registro-ponto {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+#tabela-pontos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+#tabela-pontos th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabela-pontos td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#tabela-pontos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabela-pontos tr:hover {
+    background-color: #ddd;
+}
+
+#tabela-pontos td:last-child {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #tabela-pontos th, #tabela-pontos td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
